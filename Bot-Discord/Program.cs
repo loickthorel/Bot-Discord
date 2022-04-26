@@ -1,9 +1,10 @@
 ﻿using Discord;
+using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Iot.Device.CpuTemperature;
 
-namespace console1
+namespace Bot_Discord
 {
     class Program
     {
@@ -14,10 +15,10 @@ namespace console1
 
         public static Task Main(string[] args) => new Program().MainAsync();
 
-        public Program()
+        private Program()
         {
             _client = new DiscordSocketClient();
-
+    
             //Hook into log event and write it out to the console
             _client.Log += Log;
 
@@ -26,12 +27,13 @@ namespace console1
 
             //Hook into the message received event, this is how we handle the hello world example
             _client.MessageReceived += MessageReceivedAsync;
-
+            
             //Create the configuration
             var builder = new ConfigurationBuilder()
                 .SetBasePath(AppContext.BaseDirectory)
                 .AddJsonFile(path: "config.json");            
             _config = builder.Build();
+
         }
 
         private async Task MainAsync()
@@ -79,6 +81,7 @@ namespace console1
                         break;
                 }   
             }
+            
         }
 
         private async Task GetTemp(SocketMessage message)
@@ -101,6 +104,41 @@ namespace console1
             else
             {
                 await message.Channel.SendMessageAsync("CPU temperature is not available");
+            }
+        }
+
+        private async Task AlwaysCheckTemp(SocketMessage message)
+        {
+            if (_cpuTemperature.IsAvailable)
+            {
+                var temperature = _cpuTemperature.ReadTemperatures();
+                foreach (var entry in temperature)
+                {
+                    if (!double.IsNaN(entry.Temperature.DegreesCelsius))
+                    {
+                        await message.Channel.SendMessageAsync($"Temperature from {entry.Sensor.ToString()}: {entry.Temperature.DegreesCelsius} °C");
+                    }
+                    else
+                    {
+                        await message.Channel.SendMessageAsync("Unable to read Temperature.");
+                    }
+                }
+            }
+            else
+            {
+                await message.Channel.SendMessageAsync("CPU temperature is not available");
+            }
+
+            Thread.Sleep(10000);
+        }
+        
+        public class Commands : ModuleBase<SocketCommandContext>
+        {
+            [Command("start")]
+            public Task StartMessageTimer()
+            {
+                MessTimer.StartTimer(Context);
+                return Task.CompletedTask;
             }
         }
     }
