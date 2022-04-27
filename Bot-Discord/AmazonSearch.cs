@@ -1,12 +1,13 @@
 ﻿using System.Text.RegularExpressions;
+using Discord.WebSocket;
 using Scraping.Web;
 using TestCode;
 
 namespace Bot_Discord;
 
-public static class AmazonSearch
+public class AmazonSearch
 {
-    public static Task UrlWithParameter(string parameters)
+    public Task UrlWithParameter(string parameters, SocketMessage message)
     {
         string words = parameters.Replace(' ', '+');
         Console.WriteLine(words);
@@ -77,11 +78,9 @@ public static class AmazonSearch
                 Stars = stars
             };
 
-            list.Add(obj);
-            Console.WriteLine(list[0].Name);
-            return Task.FromResult(list);
+
+            return Task.FromResult(message.Channel.SendMessageAsync($"Voici ce que j'ai trouvé : {obj.Name}: - Prix : {obj.Price} - Photo : {obj.UrlPicture} - Rating : {obj.Stars}"));
         }
 
-        return Task.FromResult(list);
-    }
+        return Task.FromResult(message.Channel.SendMessageAsync("c raté"));
 }
