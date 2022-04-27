@@ -68,6 +68,13 @@ namespace Bot_Discord
             if (message.Content.Substring(0,1) == Separator)
             {
                 string mess = message.Content.Replace(Separator, "");
+
+                if (mess.Substring(0, 4) == "Amz-")
+                {
+                    var amzObject = mess.Split("-");
+                    Console.WriteLine(amzObject);
+                }
+
                 switch (mess)
                 {
                     case "Test":
@@ -79,7 +86,7 @@ namespace Bot_Discord
                     case "Temperature":
                         await GetTemp(message);
                         break;
-                }   
+                }
             }
             
         }
@@ -104,41 +111,6 @@ namespace Bot_Discord
             else
             {
                 await message.Channel.SendMessageAsync("CPU temperature is not available");
-            }
-        }
-
-        private async Task AlwaysCheckTemp(SocketMessage message)
-        {
-            if (_cpuTemperature.IsAvailable)
-            {
-                var temperature = _cpuTemperature.ReadTemperatures();
-                foreach (var entry in temperature)
-                {
-                    if (!double.IsNaN(entry.Temperature.DegreesCelsius))
-                    {
-                        await message.Channel.SendMessageAsync($"Temperature from {entry.Sensor.ToString()}: {entry.Temperature.DegreesCelsius} °C");
-                    }
-                    else
-                    {
-                        await message.Channel.SendMessageAsync("Unable to read Temperature.");
-                    }
-                }
-            }
-            else
-            {
-                await message.Channel.SendMessageAsync("CPU temperature is not available");
-            }
-
-            Thread.Sleep(10000);
-        }
-        
-        public class Commands : ModuleBase<SocketCommandContext>
-        {
-            [Command("start")]
-            public Task StartMessageTimer()
-            {
-                MessTimer.StartTimer(Context);
-                return Task.CompletedTask;
             }
         }
     }
