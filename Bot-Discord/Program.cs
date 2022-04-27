@@ -73,7 +73,6 @@ namespace Bot_Discord
                 {
                     var amzObject = mess.Split("-");
                     await AmazonSearch.UrlWithParameter(amzObject[1], message);
-                    Console.WriteLine();
                 }
 
                 switch (mess)

@@ -5,33 +5,26 @@ using TestCode;
 
 namespace Bot_Discord;
 
-public class AmazonSearch
+public static class AmazonSearch
 {
     public static Task UrlWithParameter(string parameters, SocketMessage message)
     {
         string words = parameters.Replace(' ', '+');
-        Console.WriteLine(words);
-
         string url = "https://www.amazon.fr/s?k=" + words;
-        Console.WriteLine(url);
 
-        var ret = new HttpRequestFluent(true)
+        var ret = new HttpRequestFluent(false)
             .FromUrl(url)
             .Load();
         
-        Console.WriteLine("test-après ret");
 
         var byClassContain =
             ret.HtmlPage.GetByClassNameContains("sg-col-4-of-12 " +
                                                 "s-result-item s-asin sg-col-4-of-16 " +
                                                 "sg-col s-widget-spacing-small sg-col-4-of-20");
 
-        Console.WriteLine("test après class");
         var list = new List<AmazonObj>();
         foreach (var result in byClassContain)
         {
-            Console.WriteLine("foreach");
-            
             if (!result.InnerHtml.Contains(
                     "<i class=\"a-icon a-icon-prime a-icon-medium\" role=\"img\" aria-label=\"Amazon Prime\"></i>"))
                 continue;
