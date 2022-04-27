@@ -9,8 +9,11 @@ public class AmazonSearch
     public static List<AmazonObj> UrlWithParameter(string parameters)
     {
         string words = parameters.Replace(' ', '+');
+        Console.WriteLine(words);
+        
         string url = "https://www.amazon.fr/s?k=" + words;
-
+        Console.WriteLine(url);
+        
         var ret = new HttpRequestFluent(true)
             .FromUrl(url)
             .Load();
