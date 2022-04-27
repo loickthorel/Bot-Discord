@@ -73,10 +73,7 @@ namespace Bot_Discord
                 {
                     var amzObject = mess.Split("-");
                     var listObj = AmazonSearch.UrlWithParameter(amzObject[1]);
-                    await message.Channel.SendMessageAsync(listObj[0].Name);
-                    await message.Channel.SendMessageAsync(listObj[0].Price);
-                    await message.Channel.SendMessageAsync(listObj[0].UrlPicture);
-
+                    Console.WriteLine(listObj[0].Name);
                 }
 
                 switch (mess)
