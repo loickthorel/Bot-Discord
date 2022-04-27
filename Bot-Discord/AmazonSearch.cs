@@ -4,9 +4,9 @@ using TestCode;
 
 namespace Bot_Discord;
 
-public class AmazonSearch
+public static class AmazonSearch
 {
-    public static List<AmazonObj> UrlWithParameter(string parameters)
+    public static Task UrlWithParameter(string parameters)
     {
         string words = parameters.Replace(' ', '+');
         Console.WriteLine(words);
@@ -78,9 +78,10 @@ public class AmazonSearch
             };
 
             list.Add(obj);
-            return list;
+            Console.WriteLine(list[0].Name);
+            return Task.FromResult(list);
         }
 
-        return list;
+        return Task.FromResult(list);
     }
 }
