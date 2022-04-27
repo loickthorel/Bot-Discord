@@ -15,8 +15,6 @@ public class AmazonSearch
             .FromUrl(url)
             .Load();
 
-        Console.WriteLine(url);
-
         var byClassContain =
             ret.HtmlPage.GetByClassNameContains("sg-col-4-of-12 " +
                                                 "s-result-item s-asin sg-col-4-of-16 " +

@@ -72,7 +72,7 @@ namespace Bot_Discord
                 if (mess.Substring(0, 4) == "Amz-")
                 {
                     var amzObject = mess.Split("-");
-                    Console.WriteLine(amzObject);
+                    Console.WriteLine(amzObject[1]);
                 }
 
                 switch (mess)
