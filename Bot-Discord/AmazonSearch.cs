@@ -6,7 +6,7 @@ namespace Bot_Discord;
 
 public class AmazonSearch
 {
-    void UrlWithParameter(string parameters, bool withPrime, bool onlyPromo)
+    public static List<AmazonObj> UrlWithParameter(string parameters)
     {
         string words = parameters.Replace(' ', '+');
         string url = "https://www.amazon.fr/s?k=" + words;
@@ -75,6 +75,9 @@ public class AmazonSearch
             };
 
             list.Add(obj);
+            return list;
         }
+
+        return list;
     }
 }

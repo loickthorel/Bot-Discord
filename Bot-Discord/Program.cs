@@ -72,7 +72,11 @@ namespace Bot_Discord
                 if (mess.Substring(0, 4) == "Amz-")
                 {
                     var amzObject = mess.Split("-");
-                    Console.WriteLine(amzObject[1]);
+                    var listObj = AmazonSearch.UrlWithParameter(amzObject[1]);
+                    await message.Channel.SendMessageAsync(listObj[0].Name);
+                    await message.Channel.SendMessageAsync(listObj[0].Price);
+                    await message.Channel.SendMessageAsync(listObj[0].UrlPicture);
+
                 }
 
                 switch (mess)
