@@ -7,14 +7,14 @@ namespace Bot_Discord;
 
 public class AmazonSearch
 {
-    public Task UrlWithParameter(string parameters, SocketMessage message)
+    public static Task UrlWithParameter(string parameters, SocketMessage message)
     {
         string words = parameters.Replace(' ', '+');
         Console.WriteLine(words);
-        
+
         string url = "https://www.amazon.fr/s?k=" + words;
         Console.WriteLine(url);
-        
+
         var ret = new HttpRequestFluent(true)
             .FromUrl(url)
             .Load();
@@ -79,8 +79,9 @@ public class AmazonSearch
             };
 
 
-            return Task.FromResult(message.Channel.SendMessageAsync($"Voici ce que j'ai trouvé : {obj.Name}: - Prix : {obj.Price} - Photo : {obj.UrlPicture} - Rating : {obj.Stars}"));
+            return Task.FromResult(message.Channel.SendMessageAsync(
+                $"Voici ce que j'ai trouvé : {obj.Name}: - Prix : {obj.Price} - Photo : {obj.UrlPicture} - Rating : {obj.Stars}"));
         }
-
         return Task.FromResult(message.Channel.SendMessageAsync("c raté"));
+    }
 }
