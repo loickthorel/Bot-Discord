@@ -13,7 +13,12 @@
       <PackageReference Include="Iot.Device.Bindings" Version="2.1.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+      <PackageReference Include="Remora.Discord.Pagination" Version="2.0.10" />
       <PackageReference Include="Scraping" Version="3.0.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Paginator\Paginator.csproj" />
     </ItemGroup>
 
 </Project>

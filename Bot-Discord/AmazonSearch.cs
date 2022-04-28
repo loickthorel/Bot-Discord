@@ -1,7 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using Discord.WebSocket;
 using Scraping.Web;
-using TestCode;
 
 namespace Bot_Discord;
 
@@ -9,20 +8,17 @@ public static class AmazonSearch
 {
     public static Task UrlWithParameter(string parameters, SocketMessage message)
     {
-        string words = parameters.Replace(' ', '+');
-        string url = "https://www.amazon.fr/s?k=" + words;
+        var words = parameters.Replace(' ', '+');
+        var url = "https://www.amazon.fr/s?k=" + words;
 
         var ret = new HttpRequestFluent(false)
             .FromUrl(url)
             .Load();
         
-
         var byClassContain =
             ret.HtmlPage.GetByClassNameContains("sg-col-4-of-12 " +
                                                 "s-result-item s-asin sg-col-4-of-16 " +
                                                 "sg-col s-widget-spacing-small sg-col-4-of-20");
-
-        var list = new List<AmazonObj>();
         foreach (var result in byClassContain)
         {
             if (!result.InnerHtml.Contains(
@@ -44,15 +40,6 @@ public static class AmazonSearch
                         .Select(m => m.Groups[1].Value))
                 .Replace('"', ' ')
                 .Trim();
-
-            if (title == "")
-            {
-                title = String.Join("",
-                        Regex.Matches(result.InnerHtml, $@"a-size-base a-color-base a-text-normal(.+?)</span>")
-                            .Select(m => m.Groups[1].Value))
-                    .Replace('"', ' ')
-                    .Trim();
-            }
 
             var price = String.Join("", Regex.Matches(result.InnerHtml, @"a-price-whole"">(.+?)</span>")
                     .Select(m => m.Groups[1].Value))
@@ -76,7 +63,10 @@ public static class AmazonSearch
                 Stars = stars
             };
 
-
+            var listAmzObj = new List<AmazonObj>(){
+                obj
+            };
+            
             return Task.FromResult(message.Channel.SendMessageAsync(
                 $"Voici ce que j'ai trouvé : {obj.Name}: - Prix : {obj.Price} - Photo : {obj.UrlPicture} - Rating : {obj.Stars}"));
         }

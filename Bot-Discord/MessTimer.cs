@@ -1,26 +1,27 @@
 ﻿using System.Timers;
 using Discord.Commands;
+using Timer = System.Timers.Timer;
 
 namespace Bot_Discord;
 
 public static class MessTimer
 {
-    private static System.Timers.Timer messageTimer;
-    private static SocketCommandContext _Context;
+    private static Timer _messageTimer = new();
+    private static SocketCommandContext _context = null!;
 
     public static void StartTimer(SocketCommandContext context)
     {
-        _Context = context;
+        _context = context;
 
-        messageTimer = new System.Timers.Timer(30000);
-        messageTimer.Elapsed += OnTimerElapsed;
-        messageTimer.AutoReset = true;
-        messageTimer.Enabled = true;
+        _messageTimer = new System.Timers.Timer(30000);
+        _messageTimer.Elapsed += OnTimerElapsed;
+        _messageTimer.AutoReset = true;
+        _messageTimer.Enabled = true;
     }
 
-    public static void OnTimerElapsed(object source, ElapsedEventArgs e)
+    private static void OnTimerElapsed(object? source, ElapsedEventArgs e)
     {
-        _Context.Channel.SendMessageAsync("Test Message");
+        _context.Channel.SendMessageAsync("Test Message");
         Console.WriteLine("Test Message");
     }
 }
