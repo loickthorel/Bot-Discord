@@ -55,7 +55,6 @@ internal class Program
         return Task.CompletedTask;
     }
 
-    //I wonder if there's a better way to handle commands (spoiler: there is :))
     private async Task MessageReceivedAsync(SocketMessage message)
     {
         //This ensures we don't loop things by responding to ourselves (as the bot)
