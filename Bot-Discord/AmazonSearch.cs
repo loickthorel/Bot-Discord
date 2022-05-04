@@ -2,25 +2,30 @@
 using Discord;
 using Discord.WebSocket;
 using Scraping.Web;
-using static System.Console;
 
 namespace Bot_Discord;
 
-public static class AmazonSearch
+internal static class AmazonSearch
 {
-    private static string ImageUrl = "https://tinyurl.com/2s4ybzw3";
-    private static Embed _embed = null!;
-    private static Embed[] _embeds = new Embed[10];
+    private static readonly string WebSiteUrl;
     private static EmbedBuilder _builder = null!;
-    private static string WebSiteUrl = "https://www.amazon.fr"; 
-    static EmbedAuthorBuilder _author = new()
+    private static Embed _embed = null!; 
+    private static Embed[] _embeds = new Embed[10];
+    private static readonly EmbedAuthorBuilder Author;
+
+    static AmazonSearch()
     {
-        Name = "MegActuBot", 
-        IconUrl = ImageUrl, 
-        Url = ImageUrl,  
-    };
-    
-    public static Task UrlWithParameter(string parameters, SocketMessage message)
+        var imageUrl = "https://tinyurl.com/2s4ybzw3";
+        WebSiteUrl = "https://www.amazon.fr";
+        Author = new EmbedAuthorBuilder
+        {
+            Name = "MegActuBot", 
+            IconUrl = imageUrl, 
+            Url = imageUrl,  
+        };
+    }
+
+    public static Embed[]? UrlWithParameter(string parameters, SocketMessage message)
     {
         var words = parameters.Replace(' ', '+');
         var search = WebSiteUrl + "/s?k=" + words;
@@ -45,11 +50,13 @@ public static class AmazonSearch
                     .Select(m => m.Groups[1].Value))
                 .Replace('"', ' ')
                 .Trim();
-
-            var urlRedirection = String.Join("", Regex.Matches(result.InnerHtml, @"href="+'\u0022'+"(.+?)<div class="+'\u0022'+"a-section aok-relative")
-                    .Select(m => m.Groups[1].Value))
-                .Replace('"', ' ')
+            
+            var urlRedirection2 = String.Join("", Regex.Matches(result.InnerHtml, @"a-link-normal s-no-outline(.+?)>")
+                .Select(m => m.Groups[1].Value))
+                .Replace("\u0022", "")
+                .Replace("href=", "")
                 .Replace(">", "")
+                .Replace($"&amp;", "&")
                 .Trim();
             
             var title = String.Join("",
@@ -71,31 +78,28 @@ public static class AmazonSearch
             
             if (title.Length == 0)
                 title = parameters;
-            
+
             _builder = new EmbedBuilder
             {
                 Description = price + " € / Rating : " + stars,
                 Color = Color.DarkRed,
-                Author = _author,
+                Author = Author,
                 Title = title.Replace(">", "").Trim(), 
                 ImageUrl = urlPicture,
                 ThumbnailUrl = urlPicture,
-                Url = WebSiteUrl+urlRedirection,
+                Url = WebSiteUrl+urlRedirection2,
             };
 
             _embed = _builder.Build();
 
             if (i == 10)
-            {
                 break;
-            }
             
-            if (_embeds != null) 
+            if (_embeds != null)
                 _embeds[i] = _embed;
 
             i += 1;
         }
-        
-        return Task.FromResult(message.Channel.SendMessageAsync(embeds: _embeds));
+        return _embeds;
     }
 }

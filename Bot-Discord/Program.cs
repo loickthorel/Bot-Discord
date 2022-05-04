@@ -15,7 +15,7 @@ internal class Program
     private Program()
     {
         _client = new DiscordSocketClient();
-    
+
         //Hook into log event and write it out to the console
         _client.Log += Log;
 
@@ -24,11 +24,11 @@ internal class Program
 
         //Hook into the message received event, this is how we handle the hello world example
         _client.MessageReceived += MessageReceivedAsync;
-            
+
         //Create the configuration
         var builder = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
-            .AddJsonFile(path: "config.json");            
+            .AddJsonFile(path: "config.json");
         _config = builder.Build();
     }
 
@@ -59,7 +59,7 @@ internal class Program
         //This ensures we don't loop things by responding to ourselves (as the bot)
         if (message.Author.Id == _client.CurrentUser.Id)
             return;
-            
+
         if (message.Content[..1] == Separator)
         {
             string mess = message.Content.Replace(Separator, "");
@@ -67,7 +67,8 @@ internal class Program
             if (mess[..4] == "Amz-")
             {
                 var amzObject = mess.Split("-");
-                await AmazonSearch.UrlWithParameter(amzObject[1], message);
+                var embeds = AmazonSearch.UrlWithParameter(amzObject[1], message);
+                await message.Channel.SendMessageAsync(embeds: embeds);
             }
 
             switch (mess)
