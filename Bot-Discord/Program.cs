@@ -8,7 +8,7 @@ internal class Program
 {
     private readonly DiscordSocketClient _client;
     private readonly IConfiguration _config;
-    private const string Separator = "!"; 
+    private const string Separator = "!";
 
     public static Task Main() => new Program().MainAsync();
 
@@ -30,7 +30,6 @@ internal class Program
             .SetBasePath(AppContext.BaseDirectory)
             .AddJsonFile(path: "config.json");            
         _config = builder.Build();
-
     }
 
     private async Task MainAsync()

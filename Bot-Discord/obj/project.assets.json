@@ -95,15 +95,6 @@
           "lib/net6.0/Discord.Net.WebSocket.dll": {}
         }
       },
-      "FuzzySharp/2.0.2": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp2.1/FuzzySharp.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/FuzzySharp.dll": {}
-        }
-      },
       "HtmlAgilityPack/1.11.18": {
         "type": "package",
         "dependencies": {
@@ -117,15 +108,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
-        }
-      },
-      "Humanizer.Core/2.14.1": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Humanizer.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Humanizer.dll": {}
         }
       },
       "Iot.Device.Bindings/2.1.0": {
@@ -145,43 +127,6 @@
         },
         "runtime": {
           "lib/net6.0/Iot.Device.Bindings.dll": {}
-        }
-      },
-      "JsonDocumentPath/1.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/JsonDocumentPath.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/JsonDocumentPath.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Caching.Memory/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0",
-          "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/6.0.0": {
@@ -241,32 +186,13 @@
           "lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
@@ -313,74 +239,13 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Extensions.Http/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Logging": "6.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Http.Polly/6.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Http": "6.0.0",
-          "Polly": "7.2.2",
-          "Polly.Extensions.Http": "3.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Logging/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0",
-          "System.Diagnostics.DiagnosticSource": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
-      "Microsoft.Extensions.Options/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/6.0.0": {
@@ -460,230 +325,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        }
-      },
-      "NGettext/0.6.7": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/NGettext.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NGettext.dll": {}
-        }
-      },
-      "OneOf/3.0.216": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/OneOf.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/OneOf.dll": {}
-        }
-      },
-      "Polly/7.2.2": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Polly.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Polly.dll": {}
-        }
-      },
-      "Polly.Contrib.WaitAndRetry/1.1.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Polly.Contrib.WaitAndRetry.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Polly.Contrib.WaitAndRetry.dll": {}
-        }
-      },
-      "Polly.Extensions.Http/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Polly": "7.1.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Polly.Extensions.Http.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Polly.Extensions.Http.dll": {}
-        }
-      },
-      "Remora.Commands/9.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Options": "6.0.0",
-          "Remora.Results": "7.1.3"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Commands.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Commands.dll": {}
-        }
-      },
-      "Remora.Discord.API/56.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0",
-          "Remora.Discord.API.Abstractions": "59.0.0",
-          "Remora.Rest": "1.2.3",
-          "System.Text.Json": "6.0.3"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.API.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.API.dll": {}
-        }
-      },
-      "Remora.Discord.API.Abstractions/59.0.0": {
-        "type": "package",
-        "dependencies": {
-          "OneOf": "3.0.216",
-          "Remora.Rest.Core": "2.0.2",
-          "Remora.Results": "7.1.3"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.API.Abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.API.Abstractions.dll": {}
-        }
-      },
-      "Remora.Discord.Caching.Abstractions/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Remora.Results": "7.1.1"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.Caching.Abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.Caching.Abstractions.dll": {}
-        }
-      },
-      "Remora.Discord.Commands/20.2.0": {
-        "type": "package",
-        "dependencies": {
-          "FuzzySharp": "2.0.2",
-          "Humanizer.Core": "2.14.1",
-          "NGettext": "0.6.7",
-          "Remora.Commands": "9.0.4",
-          "Remora.Discord.Gateway": "8.0.4",
-          "Remora.Extensions.Options.Immutable": "1.0.3",
-          "System.ComponentModel.Annotations": "5.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.Commands.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.Commands.dll": {}
-        }
-      },
-      "Remora.Discord.Gateway/8.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Remora.Discord.Rest": "34.0.0",
-          "System.Threading.Channels": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.Gateway.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.Gateway.dll": {}
-        }
-      },
-      "Remora.Discord.Interactivity/3.0.10": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Caching.Memory": "6.0.1",
-          "Remora.Discord.Commands": "20.2.0",
-          "Remora.Discord.Gateway": "8.0.4"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.Interactivity.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.Interactivity.dll": {}
-        }
-      },
-      "Remora.Discord.Pagination/2.0.10": {
-        "type": "package",
-        "dependencies": {
-          "Remora.Discord.Interactivity": "3.0.10"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.Pagination.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.Pagination.dll": {}
-        }
-      },
-      "Remora.Discord.Rest/34.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Caching.Memory": "6.0.1",
-          "Microsoft.Extensions.Http.Polly": "6.0.4",
-          "Polly.Contrib.WaitAndRetry": "1.1.1",
-          "Remora.Discord.API": "56.0.0",
-          "Remora.Discord.Caching.Abstractions": "1.0.0",
-          "Remora.Rest": "1.2.3"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Discord.Rest.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Discord.Rest.dll": {}
-        }
-      },
-      "Remora.Extensions.Options.Immutable/1.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Options": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Extensions.Options.Immutable.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Extensions.Options.Immutable.dll": {}
-        }
-      },
-      "Remora.Rest/1.2.3": {
-        "type": "package",
-        "dependencies": {
-          "JsonDocumentPath": "1.0.3",
-          "Microsoft.Extensions.Http": "6.0.0",
-          "OneOf": "3.0.216",
-          "Remora.Rest.Core": "2.0.2",
-          "Remora.Results": "7.1.3",
-          "System.Text.Json": "6.0.3"
-        },
-        "compile": {
-          "lib/net6.0/Remora.Rest.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Rest.dll": {}
-        }
-      },
-      "Remora.Rest.Core/2.0.2": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Remora.Rest.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Rest.Core.dll": {}
-        }
-      },
-      "Remora.Results/7.1.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Remora.Results.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Remora.Results.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -960,15 +601,6 @@
           "lib/netstandard2.0/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel.Annotations/5.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        }
-      },
       "System.Device.Gpio/2.1.0": {
         "type": "package",
         "compile": {
@@ -992,19 +624,20 @@
           "ref/netstandard1.3/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/6.0.0": {
+      "System.Diagnostics.DiagnosticSource/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0"
         },
         "compile": {
-          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {}
+          "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
       "System.Diagnostics.Tracing/4.3.0": {
@@ -1689,7 +1322,7 @@
           }
         }
       },
-      "System.Text.Json/6.0.3": {
+      "System.Text.Json/6.0.1": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
@@ -1728,18 +1361,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Threading.dll": {}
-        }
-      },
-      "System.Threading.Channels/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/System.Threading.Channels.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/System.Threading.Channels.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Threading.Tasks/4.3.0": {
@@ -1874,21 +1495,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/UnitsNet.dll": {}
-        }
-      },
-      "Paginator/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Discord.Net.Core": "3.5.0",
-          "Discord.Net.WebSocket": "3.5.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Paginator.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Paginator.dll": {}
         }
       }
     }
@@ -2029,26 +1635,6 @@
         "lib/netstandard2.1/Discord.Net.WebSocket.xml"
       ]
     },
-    "FuzzySharp/2.0.2": {
-      "sha512": "sBKqWxw3g//peYxDZ8JipRlyPbIyBtgzqBVA5GqwHVeqtIrw75maGXAllztf+1aJhchD+drcQIgf2mFho8ZV8A==",
-      "type": "package",
-      "path": "fuzzysharp/2.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "fuzzysharp.2.0.2.nupkg.sha512",
-        "fuzzysharp.nuspec",
-        "lib/net45/FuzzySharp.dll",
-        "lib/net46/FuzzySharp.dll",
-        "lib/net461/FuzzySharp.dll",
-        "lib/netcoreapp2.0/FuzzySharp.dll",
-        "lib/netcoreapp2.1/FuzzySharp.dll",
-        "lib/netstandard1.6/FuzzySharp.dll",
-        "lib/netstandard2.0/FuzzySharp.dll",
-        "lib/netstandard2.1/FuzzySharp.dll"
-      ]
-    },
     "HtmlAgilityPack/1.11.18": {
       "sha512": "Wdfc2rEy0nr1peawYnOA8aufAo9Z5y16Oz4Rr+NmN8kMB0YBbHO4igYb+a0Px4LX5Ehx2u70dSnU6Be05Tna+w==",
       "type": "package",
@@ -2097,24 +1683,6 @@
         "lib/uap10.0/HtmlAgilityPack.pri"
       ]
     },
-    "Humanizer.Core/2.14.1": {
-      "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
-      "type": "package",
-      "path": "humanizer.core/2.14.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "humanizer.core.2.14.1.nupkg.sha512",
-        "humanizer.core.nuspec",
-        "lib/net6.0/Humanizer.dll",
-        "lib/net6.0/Humanizer.xml",
-        "lib/netstandard1.0/Humanizer.dll",
-        "lib/netstandard1.0/Humanizer.xml",
-        "lib/netstandard2.0/Humanizer.dll",
-        "lib/netstandard2.0/Humanizer.xml",
-        "logo.png"
-      ]
-    },
     "Iot.Device.Bindings/2.1.0": {
       "sha512": "pu8geB9g+7GZArmrcsLgKUJgupSqN87f0qLvMhX3YJnDb+bOB1GMSmfF8/PhI2CoX34PkoP+PYQ4MoAQ+ZeUJw==",
       "type": "package",
@@ -2132,57 +1700,6 @@
         "lib/netcoreapp3.1/Iot.Device.Bindings.xml",
         "lib/netstandard2.0/Iot.Device.Bindings.dll",
         "lib/netstandard2.0/Iot.Device.Bindings.xml"
-      ]
-    },
-    "JsonDocumentPath/1.0.3": {
-      "sha512": "4mgdlioVvfq6ZjftvsoKANWgpr/AU+UySiW68EjcbPbTfvcrZOlgS+6JkouRAN4TwI8dN2DUAVME7bklThk3KQ==",
-      "type": "package",
-      "path": "jsondocumentpath/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "jsondocumentpath.1.0.3.nupkg.sha512",
-        "jsondocumentpath.nuspec",
-        "lib/net6.0/JsonDocumentPath.dll",
-        "lib/netstandard2.1/JsonDocumentPath.dll"
-      ]
-    },
-    "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
-      "sha512": "bcz5sSFJbganH0+YrfvIjJDIcKNW7TL07C4d1eTmXy/wOt52iz4LVogJb6pazs7W0+74j0YpXFErvp++Aq5Bsw==",
-      "type": "package",
-      "path": "microsoft.extensions.caching.abstractions/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Caching.Abstractions.dll",
-        "lib/net461/Microsoft.Extensions.Caching.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
-        "microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
-        "microsoft.extensions.caching.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Caching.Memory/6.0.1": {
-      "sha512": "B4y+Cev05eMcjf1na0v9gza6GUtahXbtY1JCypIgx3B4Ea/KAgsWyXEmW4q6zMbmTMtKzmPVk09rvFJirvMwTg==",
-      "type": "package",
-      "path": "microsoft.extensions.caching.memory/6.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Caching.Memory.dll",
-        "lib/net461/Microsoft.Extensions.Caching.Memory.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.xml",
-        "microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
-        "microsoft.extensions.caching.memory.nuspec",
-        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.Configuration/6.0.0": {
@@ -2263,54 +1780,24 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/6.0.0": {
-      "sha512": "k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "sha512": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/6.0.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
-      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
-      "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
-        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
@@ -2382,132 +1869,24 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Http/6.0.0": {
-      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+    "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+      "sha512": "NxP6ahFcBnnSfwNBi2KH2Oz8Xl5Sm2krjId/jRR3I7teFphwiUoUeZPwTNA21EX+5PtjqmyAvKaOeBXcJjcH/w==",
       "type": "package",
-      "path": "microsoft.extensions.http/6.0.0",
+      "path": "microsoft.extensions.logging.abstractions/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Http.dll",
-        "lib/net461/Microsoft.Extensions.Http.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
-        "microsoft.extensions.http.6.0.0.nupkg.sha512",
-        "microsoft.extensions.http.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Http.Polly/6.0.4": {
-      "sha512": "K3b24X9HBAO8JBIizvFsvBjKElNdC3QkgTM1mZoOYowODBf7EkmFlth6ESYuQHCECwBvt8SvanBudiHdWJaA7w==",
-      "type": "package",
-      "path": "microsoft.extensions.http.polly/6.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.xml",
-        "microsoft.extensions.http.polly.6.0.4.nupkg.sha512",
-        "microsoft.extensions.http.polly.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Logging/6.0.0": {
-      "sha512": "eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg==",
-      "type": "package",
-      "path": "microsoft.extensions.logging/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Logging.dll",
-        "lib/net461/Microsoft.Extensions.Logging.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Logging.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Logging.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.Logging.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.Logging.xml",
-        "microsoft.extensions.logging.6.0.0.nupkg.sha512",
-        "microsoft.extensions.logging.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
-      "sha512": "/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
-      "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "analyzers/dotnet/roslyn3.11/cs/Microsoft.Extensions.Logging.Generators.dll",
-        "analyzers/dotnet/roslyn3.11/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll",
-        "analyzers/dotnet/roslyn4.0/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "build/Microsoft.Extensions.Logging.Abstractions.targets",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
-        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/net461/Microsoft.Extensions.Logging.Abstractions.xml",
-        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Options/6.0.0": {
-      "sha512": "dzXN0+V1AyjOe2xcJ86Qbo233KHuLEY0njf/P2Kw8SfJU+d45HNS2ctJdnEnrWbM9Ye2eFgaC5Mj9otRMU6IsQ==",
-      "type": "package",
-      "path": "microsoft.extensions.options/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Options.dll",
-        "lib/net461/Microsoft.Extensions.Options.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.6.0.0.nupkg.sha512",
-        "microsoft.extensions.options.nuspec",
-        "useSharedDesignerContext.txt"
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.Primitives/6.0.0": {
@@ -2665,361 +2044,6 @@
         "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
-      ]
-    },
-    "NGettext/0.6.7": {
-      "sha512": "gT6bf5PVayvTuEIuM2XSNqthrtn9W+LlCX4RD//Nb4hrT3agohHvPdjpROgNGgyXDkjwE74F+EwDwqUgJCJG8A==",
-      "type": "package",
-      "path": "ngettext/0.6.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/NGettext.dll",
-        "lib/net20/NGettext.xml",
-        "lib/net35/NGettext.dll",
-        "lib/net35/NGettext.xml",
-        "lib/net40/NGettext.dll",
-        "lib/net40/NGettext.xml",
-        "lib/net45/NGettext.dll",
-        "lib/net45/NGettext.xml",
-        "lib/net46/NGettext.dll",
-        "lib/net46/NGettext.xml",
-        "lib/netstandard1.0/NGettext.dll",
-        "lib/netstandard1.0/NGettext.xml",
-        "lib/netstandard1.3/NGettext.dll",
-        "lib/netstandard1.3/NGettext.xml",
-        "lib/netstandard2.0/NGettext.dll",
-        "lib/netstandard2.0/NGettext.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/NGettext.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/NGettext.xml",
-        "lib/portable-net40+sl5+win8+wp8/NGettext.dll",
-        "lib/portable-net40+sl5+win8+wp8/NGettext.xml",
-        "ngettext.0.6.7.nupkg.sha512",
-        "ngettext.nuspec"
-      ]
-    },
-    "OneOf/3.0.216": {
-      "sha512": "hvSxx7O9Z50ZK/HZaqxcEiO1skihnHcsziy0cVRqSq7LrETM9swcRcMZuG+0irai7jq8FYYCHTrB/pSHSah6ug==",
-      "type": "package",
-      "path": "oneof/3.0.216",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net35/OneOf.dll",
-        "lib/net45/OneOf.dll",
-        "lib/netstandard1.3/OneOf.dll",
-        "lib/netstandard2.0/OneOf.dll",
-        "oneof.3.0.216.nupkg.sha512",
-        "oneof.nuspec"
-      ]
-    },
-    "Polly/7.2.2": {
-      "sha512": "E6CeKyS513j7taKAq4q2MESDBvzuzWnR1rQ2Y2zqJvpiVtKMm699Aubb20MUPBDmb0Ov8PmcLHTCVFdCjoy2kA==",
-      "type": "package",
-      "path": "polly/7.2.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/Polly.dll",
-        "lib/net461/Polly.pdb",
-        "lib/net461/Polly.xml",
-        "lib/net472/Polly.dll",
-        "lib/net472/Polly.pdb",
-        "lib/net472/Polly.xml",
-        "lib/netstandard1.1/Polly.dll",
-        "lib/netstandard1.1/Polly.pdb",
-        "lib/netstandard1.1/Polly.xml",
-        "lib/netstandard2.0/Polly.dll",
-        "lib/netstandard2.0/Polly.pdb",
-        "lib/netstandard2.0/Polly.xml",
-        "polly.7.2.2.nupkg.sha512",
-        "polly.nuspec"
-      ]
-    },
-    "Polly.Contrib.WaitAndRetry/1.1.1": {
-      "sha512": "1MUQLiSo4KDkQe6nzQRhIU05lm9jlexX5BVsbuw0SL82ynZ+GzAHQxJVDPVBboxV37Po3SG077aX8DuSy8TkaA==",
-      "type": "package",
-      "path": "polly.contrib.waitandretry/1.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/Polly.Contrib.WaitAndRetry.dll",
-        "lib/net461/Polly.Contrib.WaitAndRetry.pdb",
-        "lib/net461/Polly.Contrib.WaitAndRetry.xml",
-        "lib/net472/Polly.Contrib.WaitAndRetry.dll",
-        "lib/net472/Polly.Contrib.WaitAndRetry.pdb",
-        "lib/net472/Polly.Contrib.WaitAndRetry.xml",
-        "lib/netstandard1.1/Polly.Contrib.WaitAndRetry.dll",
-        "lib/netstandard1.1/Polly.Contrib.WaitAndRetry.pdb",
-        "lib/netstandard1.1/Polly.Contrib.WaitAndRetry.xml",
-        "lib/netstandard2.0/Polly.Contrib.WaitAndRetry.dll",
-        "lib/netstandard2.0/Polly.Contrib.WaitAndRetry.pdb",
-        "lib/netstandard2.0/Polly.Contrib.WaitAndRetry.xml",
-        "polly.contrib.waitandretry.1.1.1.nupkg.sha512",
-        "polly.contrib.waitandretry.nuspec"
-      ]
-    },
-    "Polly.Extensions.Http/3.0.0": {
-      "sha512": "drrG+hB3pYFY7w1c3BD+lSGYvH2oIclH8GRSehgfyP5kjnFnHKQuuBhuHLv+PWyFuaTDyk/vfRpnxOzd11+J8g==",
-      "type": "package",
-      "path": "polly.extensions.http/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard1.1/Polly.Extensions.Http.dll",
-        "lib/netstandard1.1/Polly.Extensions.Http.xml",
-        "lib/netstandard2.0/Polly.Extensions.Http.dll",
-        "lib/netstandard2.0/Polly.Extensions.Http.xml",
-        "polly.extensions.http.3.0.0.nupkg.sha512",
-        "polly.extensions.http.nuspec"
-      ]
-    },
-    "Remora.Commands/9.0.4": {
-      "sha512": "28s7WpjKz9vFEwbL2UQGHZ7gZT0WkGy56nbLuqWv4U0uXDKLQKXYkTXuS87QPOVd2lVbtnuj80T0LM227DAdrA==",
-      "type": "package",
-      "path": "remora.commands/9.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Commands.dll",
-        "lib/net5.0/Remora.Commands.xml",
-        "lib/net6.0/Remora.Commands.dll",
-        "lib/net6.0/Remora.Commands.xml",
-        "lib/netstandard2.1/Remora.Commands.dll",
-        "lib/netstandard2.1/Remora.Commands.xml",
-        "remora.commands.9.0.4.nupkg.sha512",
-        "remora.commands.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.API/56.0.0": {
-      "sha512": "TSgoD/odZUJgXEHpwOO89cdunBz+zL2VAI18DxQF+sQpkFNChiPDwgan5t+CbBClbhtV5SU6ZH2RWRwNX8FktA==",
-      "type": "package",
-      "path": "remora.discord.api/56.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Discord.API.dll",
-        "lib/net5.0/Remora.Discord.API.xml",
-        "lib/net6.0/Remora.Discord.API.dll",
-        "lib/net6.0/Remora.Discord.API.xml",
-        "lib/netstandard2.1/Remora.Discord.API.dll",
-        "lib/netstandard2.1/Remora.Discord.API.xml",
-        "remora.discord.api.56.0.0.nupkg.sha512",
-        "remora.discord.api.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.API.Abstractions/59.0.0": {
-      "sha512": "b2vzowEYRtgawkdDfQ8JrXcv4Q6Ftvl8cmzUVFxo8MBe9DU392IN7ka6xp/Mh85UnXrYYgsErnj1LaTgdynCPA==",
-      "type": "package",
-      "path": "remora.discord.api.abstractions/59.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Discord.API.Abstractions.dll",
-        "lib/net5.0/Remora.Discord.API.Abstractions.xml",
-        "lib/net6.0/Remora.Discord.API.Abstractions.dll",
-        "lib/net6.0/Remora.Discord.API.Abstractions.xml",
-        "lib/netstandard2.1/Remora.Discord.API.Abstractions.dll",
-        "lib/netstandard2.1/Remora.Discord.API.Abstractions.xml",
-        "remora.discord.api.abstractions.59.0.0.nupkg.sha512",
-        "remora.discord.api.abstractions.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.Caching.Abstractions/1.0.0": {
-      "sha512": "GuL4ainiDgDFZ1tNI4Y0dSg6s+jGkphMazFzK4LE08zQE99kgs0zqVz7O7+bmHIBuOXQDtkED2jiDKjAkvgw5A==",
-      "type": "package",
-      "path": "remora.discord.caching.abstractions/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net5.0/Remora.Discord.Caching.Abstractions.dll",
-        "lib/net5.0/Remora.Discord.Caching.Abstractions.xml",
-        "lib/net6.0/Remora.Discord.Caching.Abstractions.dll",
-        "lib/net6.0/Remora.Discord.Caching.Abstractions.xml",
-        "lib/netstandard2.1/Remora.Discord.Caching.Abstractions.dll",
-        "lib/netstandard2.1/Remora.Discord.Caching.Abstractions.xml",
-        "remora.discord.caching.abstractions.1.0.0.nupkg.sha512",
-        "remora.discord.caching.abstractions.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.Commands/20.2.0": {
-      "sha512": "0cxY9p4QPDCo6CBGlY/gEV4zo09XXq6YuTVjMP3O8fAZ6pJ2zAdjRz76wsVMAuvdlkK1LW2wJqMBNDy6Qu3p1g==",
-      "type": "package",
-      "path": "remora.discord.commands/20.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Discord.Commands.dll",
-        "lib/net5.0/Remora.Discord.Commands.xml",
-        "lib/net6.0/Remora.Discord.Commands.dll",
-        "lib/net6.0/Remora.Discord.Commands.xml",
-        "lib/netstandard2.1/Remora.Discord.Commands.dll",
-        "lib/netstandard2.1/Remora.Discord.Commands.xml",
-        "remora.discord.commands.20.2.0.nupkg.sha512",
-        "remora.discord.commands.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.Gateway/8.0.4": {
-      "sha512": "EoYYTIMqx2EKoXm3f/y0EBiObo0xqQyflv0J61hMpskdw6JYQX9OfhvWxrulaKMXWc1f17HvjyQT4lgL1sNiJQ==",
-      "type": "package",
-      "path": "remora.discord.gateway/8.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Discord.Gateway.dll",
-        "lib/net5.0/Remora.Discord.Gateway.xml",
-        "lib/net6.0/Remora.Discord.Gateway.dll",
-        "lib/net6.0/Remora.Discord.Gateway.xml",
-        "lib/netstandard2.1/Remora.Discord.Gateway.dll",
-        "lib/netstandard2.1/Remora.Discord.Gateway.xml",
-        "remora.discord.gateway.8.0.4.nupkg.sha512",
-        "remora.discord.gateway.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.Interactivity/3.0.10": {
-      "sha512": "H04/11cjVH/6ap2dv80UpLoveKqbd8w1TcaTKuPzpIW/wcZNBz1ln5EyMGAlVYzwcVZSOKdEImbiKLW+C6SVGw==",
-      "type": "package",
-      "path": "remora.discord.interactivity/3.0.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Discord.Interactivity.dll",
-        "lib/net5.0/Remora.Discord.Interactivity.xml",
-        "lib/net6.0/Remora.Discord.Interactivity.dll",
-        "lib/net6.0/Remora.Discord.Interactivity.xml",
-        "lib/netstandard2.1/Remora.Discord.Interactivity.dll",
-        "lib/netstandard2.1/Remora.Discord.Interactivity.xml",
-        "remora.discord.interactivity.3.0.10.nupkg.sha512",
-        "remora.discord.interactivity.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.Pagination/2.0.10": {
-      "sha512": "2rr5mcqbpUbSIs4YFw324ziJ/KwGOHbb3R2AwB/pdDesbqvlSXv1a8xov2ySy12omF43zEcNCQDGffIIbNEm+g==",
-      "type": "package",
-      "path": "remora.discord.pagination/2.0.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Discord.Pagination.dll",
-        "lib/net5.0/Remora.Discord.Pagination.xml",
-        "lib/net6.0/Remora.Discord.Pagination.dll",
-        "lib/net6.0/Remora.Discord.Pagination.xml",
-        "lib/netstandard2.1/Remora.Discord.Pagination.dll",
-        "lib/netstandard2.1/Remora.Discord.Pagination.xml",
-        "remora.discord.pagination.2.0.10.nupkg.sha512",
-        "remora.discord.pagination.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Discord.Rest/34.0.0": {
-      "sha512": "BgSQLe7P+SRFHwyACx2M3tq5mEaLS3PWuyW6jtSoFz6DPAf2grZqzIHN/To7/EfmIHl++M2zz66+ZhfnUVCT0A==",
-      "type": "package",
-      "path": "remora.discord.rest/34.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Discord.Rest.dll",
-        "lib/net5.0/Remora.Discord.Rest.xml",
-        "lib/net6.0/Remora.Discord.Rest.dll",
-        "lib/net6.0/Remora.Discord.Rest.xml",
-        "lib/netstandard2.1/Remora.Discord.Rest.dll",
-        "lib/netstandard2.1/Remora.Discord.Rest.xml",
-        "remora.discord.rest.34.0.0.nupkg.sha512",
-        "remora.discord.rest.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Extensions.Options.Immutable/1.0.3": {
-      "sha512": "TRDo4VeoUpNUNbopibYosNVqvEc7/eO5hzSXrg0A46IIgSt75HaTiaEIDY029dpzNLdxuF2Q4yfbTHtwr3QDeQ==",
-      "type": "package",
-      "path": "remora.extensions.options.immutable/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net461/Remora.Extensions.Options.Immutable.dll",
-        "lib/net461/Remora.Extensions.Options.Immutable.xml",
-        "lib/net6.0/Remora.Extensions.Options.Immutable.dll",
-        "lib/net6.0/Remora.Extensions.Options.Immutable.xml",
-        "lib/netstandard2.0/Remora.Extensions.Options.Immutable.dll",
-        "lib/netstandard2.0/Remora.Extensions.Options.Immutable.xml",
-        "lib/netstandard2.1/Remora.Extensions.Options.Immutable.dll",
-        "lib/netstandard2.1/Remora.Extensions.Options.Immutable.xml",
-        "remora.extensions.options.immutable.1.0.3.nupkg.sha512",
-        "remora.extensions.options.immutable.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Rest/1.2.3": {
-      "sha512": "2Ouz9S+lFQbS1TRce8JvzaiHxdCvUr+pPhALoqzF7gfKehAbZnZP8NdHP5GSNmA8MLNeHlECBWtQSkK7FSFUGg==",
-      "type": "package",
-      "path": "remora.rest/1.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Rest.dll",
-        "lib/net5.0/Remora.Rest.xml",
-        "lib/net6.0/Remora.Rest.dll",
-        "lib/net6.0/Remora.Rest.xml",
-        "lib/netstandard2.1/Remora.Rest.dll",
-        "lib/netstandard2.1/Remora.Rest.xml",
-        "remora.rest.1.2.3.nupkg.sha512",
-        "remora.rest.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Rest.Core/2.0.2": {
-      "sha512": "7MSeMl+mvjcTK2i5ftxJ5MFt4yDt5ymTKo9ftYnowBX/VNcek08WQBeDyRH4fdU+icAOy2cBDH+UZRLANIS6MQ==",
-      "type": "package",
-      "path": "remora.rest.core/2.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Remora.Rest.Core.dll",
-        "lib/net5.0/Remora.Rest.Core.xml",
-        "lib/net6.0/Remora.Rest.Core.dll",
-        "lib/net6.0/Remora.Rest.Core.xml",
-        "lib/netstandard2.1/Remora.Rest.Core.dll",
-        "lib/netstandard2.1/Remora.Rest.Core.xml",
-        "remora.rest.core.2.0.2.nupkg.sha512",
-        "remora.rest.core.nuspec",
-        "shark.png"
-      ]
-    },
-    "Remora.Results/7.1.3": {
-      "sha512": "dCdP0MXw/whzTKbJebL1fcguzwD+KwklvYN9p+qyJspjCyJnEXE14De/AzevEbEjV9KTWKJQke3hj5InloTTHw==",
-      "type": "package",
-      "path": "remora.results/7.1.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net6.0/Remora.Results.dll",
-        "lib/net6.0/Remora.Results.xml",
-        "lib/netstandard2.0/Remora.Results.dll",
-        "lib/netstandard2.0/Remora.Results.xml",
-        "lib/netstandard2.1/Remora.Results.dll",
-        "lib/netstandard2.1/Remora.Results.xml",
-        "remora.results.7.1.3.nupkg.sha512",
-        "remora.results.nuspec",
-        "shark.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -3538,96 +2562,6 @@
         "version.txt"
       ]
     },
-    "System.ComponentModel.Annotations/5.0.0": {
-      "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
-      "type": "package",
-      "path": "system.componentmodel.annotations/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/net461/System.ComponentModel.Annotations.dll",
-        "lib/netcore50/System.ComponentModel.Annotations.dll",
-        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
-        "lib/portable-net45+win8/_._",
-        "lib/win8/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/net461/System.ComponentModel.Annotations.dll",
-        "ref/net461/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/System.ComponentModel.Annotations.dll",
-        "ref/netcore50/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
-        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
-        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
-        "ref/portable-net45+win8/_._",
-        "ref/win8/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.5.0.0.nupkg.sha512",
-        "system.componentmodel.annotations.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Device.Gpio/2.1.0": {
       "sha512": "A/9kEYPu11g0G43uBQT8KVh/6CKJfY6qVBJNrB3teWgxMOENIHy6ll8v5aXkzvyv2WYQFJeCCrZPLkZiQ/iLEw==",
       "type": "package",
@@ -3716,29 +2650,25 @@
         "system.diagnostics.debug.nuspec"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/6.0.0": {
-      "sha512": "frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
+    "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "sha512": "tD6kosZnTAGdrEa0tZSuFyunMbt/5KYDnHdndJYGqZoNy00XVXyACd5d6KnE1YgYv3ne2CjtAfNXo/fwEhnKUA==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/6.0.0",
+      "path": "system.diagnostics.diagnosticsource/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net461/System.Diagnostics.DiagnosticSource.xml",
-        "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
-        "lib/net6.0/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net6.0/System.Diagnostics.DiagnosticSource.xml",
-        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
-        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-        "system.diagnostics.diagnosticsource.nuspec",
-        "useSharedDesignerContext.txt"
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net46/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec"
       ]
     },
     "System.Diagnostics.Tracing/4.3.0": {
@@ -5595,10 +4525,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/6.0.3": {
-      "sha512": "1Bi8pSdTTVNVKcGFiU1o9Iq6FwFyGQmgBgGHxy9pPvZANXc1cT6D72j+r/H/NsyVnWxKIxOgI3o7DrAwC3zcaA==",
+    "System.Text.Json/6.0.1": {
+      "sha512": "X3cTdM+jna1YyfTUzToW7aVgINFv7R1W4+1+3hua/YCyLjApPoR8fd+2Cep9DbfYjbv+rBx4K6dlmAWEJr9AHg==",
       "type": "package",
-      "path": "system.text.json/6.0.3",
+      "path": "system.text.json/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5644,7 +4574,7 @@
         "lib/netcoreapp3.1/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.6.0.3.nupkg.sha512",
+        "system.text.json.6.0.1.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5802,33 +4732,6 @@
         "runtimes/aot/lib/netcore50/System.Threading.dll",
         "system.threading.4.3.0.nupkg.sha512",
         "system.threading.nuspec"
-      ]
-    },
-    "System.Threading.Channels/6.0.0": {
-      "sha512": "TY8/9+tI0mNaUMgntOxxaq2ndTkdXqLSxvPmas7XEqOlv9lQtB7wLjYGd756lOaO7Dvb5r/WXhluM+0Xe87v5Q==",
-      "type": "package",
-      "path": "system.threading.channels/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.Threading.Channels.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/System.Threading.Channels.dll",
-        "lib/net461/System.Threading.Channels.xml",
-        "lib/net6.0/System.Threading.Channels.dll",
-        "lib/net6.0/System.Threading.Channels.xml",
-        "lib/netcoreapp3.1/System.Threading.Channels.dll",
-        "lib/netcoreapp3.1/System.Threading.Channels.xml",
-        "lib/netstandard2.0/System.Threading.Channels.dll",
-        "lib/netstandard2.0/System.Threading.Channels.xml",
-        "lib/netstandard2.1/System.Threading.Channels.dll",
-        "lib/netstandard2.1/System.Threading.Channels.xml",
-        "system.threading.channels.6.0.0.nupkg.sha512",
-        "system.threading.channels.nuspec",
-        "useSharedDesignerContext.txt"
       ]
     },
     "System.Threading.Tasks/4.3.0": {
@@ -6165,11 +5068,6 @@
         "unitsnet.4.77.0.nupkg.sha512",
         "unitsnet.nuspec"
       ]
-    },
-    "Paginator/1.0.0": {
-      "type": "project",
-      "path": "../Paginator/Paginator.csproj",
-      "msbuildProject": "../Paginator/Paginator.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6178,8 +5076,6 @@
       "Iot.Device.Bindings >= 2.1.0",
       "Microsoft.Extensions.Configuration >= 6.0.0",
       "Microsoft.Extensions.Configuration.Json >= 6.0.0",
-      "Paginator >= 1.0.0",
-      "Remora.Discord.Pagination >= 2.0.10",
       "Scraping >= 3.0.0.3"
     ]
   },
@@ -6215,11 +5111,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\Thorel\\RiderProjects\\Bot-Discord\\Paginator\\Paginator.csproj": {
-              "projectPath": "C:\\Users\\Thorel\\RiderProjects\\Bot-Discord\\Paginator\\Paginator.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -6247,10 +5139,6 @@
           "Microsoft.Extensions.Configuration.Json": {
             "target": "Package",
             "version": "[6.0.0, )"
-          },
-          "Remora.Discord.Pagination": {
-            "target": "Package",
-            "version": "[2.0.10, )"
           },
           "Scraping": {
             "target": "Package",
