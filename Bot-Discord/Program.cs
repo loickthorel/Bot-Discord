@@ -63,12 +63,19 @@ internal class Program
         if (message.Content[..1] == Separator)
         {
             string mess = message.Content.Replace(Separator, "");
-
-            if (mess[..4] == "Amz-")
+            switch (mess[..4])
             {
-                var amzObject = mess.Split("-");
-                var embeds = AmazonSearch.UrlWithParameter(amzObject[1], message);
-                await message.Channel.SendMessageAsync(embeds: embeds);
+                case "Amz-":
+                    var amzObject = mess.Split("-");
+                    var amzEmbeds = AmazonSearch.UrlWithParameter(amzObject[1]);
+                    await message.Channel.SendMessageAsync(embeds: amzEmbeds);
+                    break;
+                
+                case "Ike-":
+                    var ikeaObject = mess.Split("-");
+                    var ikeaEmbeds = IkeaSearch.UrlWithParameter(ikeaObject[1]);
+                    await message.Channel.SendMessageAsync(embeds: ikeaEmbeds);
+                    break;
             }
 
             switch (mess)

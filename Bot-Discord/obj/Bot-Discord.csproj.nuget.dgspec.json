@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[3.5.0, )"
             },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.42, )"
+            },
             "Iot.Device.Bindings": {
               "target": "Package",
               "version": "[2.1.0, )"

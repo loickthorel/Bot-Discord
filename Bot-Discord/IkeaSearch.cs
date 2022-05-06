@@ -4,26 +4,27 @@ using Scraping.Web;
 
 namespace Bot_Discord;
 
-internal static class AmazonSearch
+internal static class IkeaSearch
 {
-    private static EmbedBuilder _builder = null!;
-    private static Embed _embed = null!; 
-    private static Embed[] _embeds = new Embed[10];
-    private static readonly EmbedAuthorBuilder Author;
     private static readonly string WebSiteUrl;
     private static readonly string UrlSearch;
-    
-    static AmazonSearch()
+    private static EmbedBuilder _builder = null!;
+    private static Embed _embed = null!;
+    private static Embed[] _embeds = new Embed[10];
+    private static readonly EmbedAuthorBuilder Author;
+
+    static IkeaSearch()
     {
         var imageUrl = "https://tinyurl.com/2s4ybzw3";
-        
-        WebSiteUrl = "https://amazon.fr";
-        UrlSearch = "/s?k=";
+        WebSiteUrl = "https://www.ikea.com";
+        // https://www.ikea.com/fr/fr/search/products/?q=bureau
+        UrlSearch = "/fr/fr/search/products/?q=";
+        // UrlSearch = "/fr/fr/search/?q=";
         Author = new EmbedAuthorBuilder
         {
-            Name = "MegActuBot", 
-            IconUrl = imageUrl, 
-            Url = imageUrl,  
+            Name = "MegActuBot",
+            IconUrl = imageUrl,
+            Url = imageUrl,
         };
     }
 
@@ -31,22 +32,22 @@ internal static class AmazonSearch
     {
         var words = parameters.Replace(' ', '+');
         var search = WebSiteUrl + UrlSearch + words;
-
+        Console.WriteLine(search);
+        
         var ret = new HttpRequestFluent(false)
             .FromUrl(search)
             .Load();
-
+        
         var byClassContain =
-            ret.HtmlPage.GetByClassNameContains("sg-col-4-of-12 " +
-                                                "s-result-item s-asin sg-col-4-of-16 " +
-                                                "sg-col s-widget-spacing-small sg-col-4-of-20");
+            ret.HtmlPage.GetByClassNameContains("serp-grid search-grid");
 
         var i = 0;
         foreach (var result in byClassContain)
         {
-            if (!result.InnerHtml.Contains(
-                    "<i class=\"a-icon a-icon-prime a-icon-medium\" role=\"img\" aria-label=\"Amazon Prime\"></i>"))
-                continue;
+            var urlPicture2 = string.Join("", Regex.Matches(result.InnerHtml, @"src=(.+?) srcset")
+                    .Select(m => m.Groups[1].Value))
+                .Replace('"', ' ')
+                .Trim();
             
             var urlPicture = String.Join("", Regex.Matches(result.InnerHtml, @"src=(.+?) srcset")
                     .Select(m => m.Groups[1].Value))
@@ -77,7 +78,7 @@ internal static class AmazonSearch
                 .Replace('"', ' ')
                 .Replace('>', ' ')
                 .Trim();
-            
+
             if (title.Length == 0)
                 title = parameters;
 
@@ -86,22 +87,23 @@ internal static class AmazonSearch
                 Description = price + " € / Rating : " + stars,
                 Color = Color.DarkRed,
                 Author = Author,
-                Title = title.Replace(">", "").Trim(), 
+                Title = title.Replace(">", "").Trim(),
                 ImageUrl = urlPicture,
                 ThumbnailUrl = urlPicture,
-                Url = WebSiteUrl+urlRedirection2,
+                Url = WebSiteUrl + urlRedirection2,
             };
 
             _embed = _builder.Build();
 
             if (i == 10)
                 break;
-            
+
             if (_embeds != null)
                 _embeds[i] = _embed;
 
             i += 1;
         }
+
         return _embeds;
     }
 }
